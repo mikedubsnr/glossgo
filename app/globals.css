@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-white text-black-300 font-sans;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  ::selection {
+    @apply bg-rose-200 text-black-300;
+  }
+}
+
+@layer components {
+  .luxury-gradient {
+    background: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 50%, #0A0A0A 100%);
+  }
+
+  .rose-gold-gradient {
+    background: linear-gradient(135deg, #D4A5A5 0%, #E8C39E 50%, #D4A5A5 100%);
+  }
+
+  .champagne-gradient {
+    background: linear-gradient(135deg, #FFF8ED 0%, #FFE4B8 50%, #FFF8ED 100%);
+  }
+
+  .text-gradient-rose {
+    background: linear-gradient(135deg, #D4A5A5, #E8C39E);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-xl border border-white/20 shadow-lg;
+  }
+
+  .glass-dark {
+    @apply bg-black-50/80 backdrop-blur-xl border border-white/10;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-4 bg-black-300 text-white font-medium rounded-full 
+           transition-all duration-300 hover:bg-black-50 hover:shadow-xl hover:shadow-black-300/20
+           active:scale-95;
+  }
+
+  .btn-rose {
+    @apply inline-flex items-center justify-center px-8 py-4 bg-rose-500 text-white font-medium rounded-full 
+           transition-all duration-300 hover:bg-rose-600 hover:shadow-xl hover:shadow-rose-500/20
+           active:scale-95;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-8 py-4 border-2 border-black-300 text-black-300 font-medium rounded-full 
+           transition-all duration-300 hover:bg-black-300 hover:text-white
+           active:scale-95;
+  }
+
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16;
+  }
+
+  .container-luxury {
+    @apply max-w-7xl mx-auto section-padding;
+  }
+
+  .heading-1 {
+    @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1];
+  }
+
+  .heading-2 {
+    @apply text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-[1.15];
+  }
+
+  .heading-3 {
+    @apply text-2xl sm:text-3xl font-semibold tracking-tight;
+  }
+
+  .body-large {
+    @apply text-lg sm:text-xl text-black-300/70 leading-relaxed;
+  }
+
+  .body-small {
+    @apply text-sm text-black-300/60 leading-relaxed;
+  }
+
+  .card-luxury {
+    @apply bg-white rounded-2xl border border-black-300/5 shadow-sm 
+           transition-all duration-500 hover:shadow-xl hover:shadow-black-300/5 hover:-translate-y-1;
+  }
+
+  .input-luxury {
+    @apply w-full px-5 py-4 bg-white border border-black-300/10 rounded-xl 
+           text-black-300 placeholder:text-black-300/40
+           focus:outline-none focus:border-rose-400 focus:ring-2 focus:ring-rose-400/20
+           transition-all duration-300;
+  }
+
+  .nav-link {
+    @apply text-sm font-medium text-black-300/70 hover:text-black-300 transition-colors duration-300;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
