@@ -24,6 +24,7 @@ import {
   Eye,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import ProviderCard from "@/components/ProviderCard";
 import Footer from "@/components/Footer";
@@ -181,10 +182,13 @@ export default function LandingPage() {
                       className="w-full bg-transparent text-black-300 placeholder:text-black-300/40 focus:outline-none text-sm"
                     />
                   </div>
-                  <button className="px-8 py-3 bg-black-300 text-white font-medium rounded-xl hover:bg-black-50 transition-all duration-300 flex items-center justify-center gap-2 active:scale-95">
+                      <Link
+                    href={`/search?query=${encodeURIComponent(searchQuery)}&location=${encodeURIComponent(locationQuery)}`}
+                    className="px-8 py-3 bg-black-300 text-white font-medium rounded-xl hover:bg-black-50 transition-all duration-300 flex items-center justify-center gap-2 active:scale-95"
+                  >
                     <Search className="w-4 h-4" />
                     <span className="hidden sm:inline">Search</span>
-                  </button>
+                  </Link>
                 </div>
               </div>
             </motion.div>
@@ -196,10 +200,10 @@ export default function LandingPage() {
               transition={{ duration: 0.7, delay: 0.9 }}
               className="flex flex-col sm:flex-row items-center justify-center gap-4"
             >
-              <a href="#providers" className="btn-primary w-full sm:w-auto">
-                Book Now
+              <Link href="/search" className="btn-primary w-full sm:w-auto">
+                Browse Marketplace
                 <ArrowRight className="w-4 h-4 ml-2" />
-              </a>
+              </Link>
               <a
                 href="#how-it-works"
                 className="inline-flex items-center gap-2 px-8 py-4 text-white font-medium rounded-full border-2 border-white/30 hover:bg-white/10 transition-all duration-300 w-full sm:w-auto justify-center"

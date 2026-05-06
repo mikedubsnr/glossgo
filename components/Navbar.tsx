@@ -18,6 +18,7 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
+    { label: "Marketplace", href: "/search" },
     { label: "Discover", href: "#discover" },
     { label: "How It Works", href: "#how-it-works" },
     { label: "Providers", href: "#providers" },
